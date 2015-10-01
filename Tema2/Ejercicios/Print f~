@@ -1,0 +1,26 @@
+print f ("%d pts son %42f euros" , pesetas , euros)
+
+%C --> Caracter
+%S --> Cadena
+%S --> Nº entero
+%F --> Decimales
+
+-----------------------------
+
+print  (sin salto de linea)
+println (con salto de linea)
+-----------------------------
+
+
+system.out.printf("%"
+
+%C --> Caracter
+%S --> Cadena
+%S --> Nº entero
+%F --> Decimales
+
+%.2f  (para poner 2 decimales)
+
+
+%12.2f (para que salgan alineado a la derecha hasta completar 12)
+
