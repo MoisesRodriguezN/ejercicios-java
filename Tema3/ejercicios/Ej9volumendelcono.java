@@ -30,7 +30,7 @@ public class Ej9volumendelcono {
     total = fraccion * pi * (radio * radio) * altura ;
     
     
-    System.out.printf(".2%", total);
+    System.out.printf("%.2f", total);
     
    
   } 

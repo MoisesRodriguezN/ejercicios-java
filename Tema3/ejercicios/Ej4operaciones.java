@@ -29,8 +29,8 @@ public class Ej4operaciones {
     int total3;
     total3 = primerNumero * segundoNumero;
     
-    int total4;
-    total4 = primerNumero / segundoNumero;
+    double total4;
+    total4 = (double)primerNumero / (double)segundoNumero;
 
     System.out.print("El primer número mas el segundo número es ");
     System.out.println(total1);   

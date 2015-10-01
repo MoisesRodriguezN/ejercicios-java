@@ -11,19 +11,25 @@ public class Ej5arearectangulo {
 
     System.out.print("Por favor, introduce la base del rectangulo: ");
     linea = System.console().readLine(); //Introducir caracteres con el teclado
-    int primerNumero;
-    primerNumero = Integer.parseInt( linea ); //convierte en número entero
+    double primerNumero;
+    primerNumero = Double.parseDouble( linea ); //convierte en número entero
 
     System.out.print("Introduce la altura, por favor: ");
     linea = System.console().readLine();
-    int segundoNumero;
-    segundoNumero = Integer.parseInt( linea );
+    double segundoNumero;
+    segundoNumero = Double.parseDouble( linea );
+    
+    String medida4;
+    System.out.print("Por favor, introduce el la unidad de medida");
+    medida4 = System.console().readLine();
+   
+    
 
-    int total1;
+    double total1;
     total1 = primerNumero * segundoNumero;
     
     System.out.print("El area del rectangulo es ");
-    System.out.println(total1);   
+    System.out.println(total1 + medida4);   
     
    
   } 
