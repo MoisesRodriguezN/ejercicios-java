@@ -1,2 +1,4 @@
 # ejercicios-java
-Ejercicios de java de 1º DAW
+Este repositorio es para guardar los *ejercicios* de clase de **1º DAW**
+
+
