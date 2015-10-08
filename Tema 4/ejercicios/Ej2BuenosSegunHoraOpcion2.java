@@ -7,7 +7,7 @@
  * @author Moisés Rodríguez Naranjo
  */
 
-public class Ej2BuenosSegunHora {
+public class Ej2BuenosSegunHoraOpcion2 {
   public static void main(String[] args) {
     System.out.print("Dime una hora: ");
     String linea = System.console().readLine();
@@ -16,21 +16,20 @@ public class Ej2BuenosSegunHora {
     if ((n >= 6) && (n <= 12)) {
       System.out.println("Buenos días");
       
-    }else
+    } 
   
     if ((n >= 13) && (n <= 20)) {
       System.out.println("Buenas tardes");
-      
-    }else
+    }
     
     if ((n >= 21) && (n <=23)) {
       System.out.println("Buenas Noches");
-    }else
+    }
     
     if ((n >= 0) && (n <=5)) {
     System.out.println("Buenas Noches");
-    }else
-    System.out.println("Hora no valida ");
+    
+    }
           
   }
 }
