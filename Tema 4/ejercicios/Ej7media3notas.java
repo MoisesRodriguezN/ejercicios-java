@@ -10,7 +10,7 @@ public class Ej6tiempotardaencaer {
   public static void main(String[] args) {
     System.out.print("Dime la altura ");
     String linea = System.console().readLine();
-    double altura = Double.parseDouble( linea );
+    double altura = Integer.parseInt( linea );
     
     double g;
     g = 9.81;
