@@ -15,13 +15,17 @@ public class Ej6tiempotardaencaer {
     double g;
     g = 9.81;
     
-    double total1;
-    total1 = 2 * altura / g;
+    if (altura > 0) {
+      double total1;
+      total1 = 2 * altura / g;
     
     double total2;
-    total2 = Math.sqrt(total1);
-    
-    System.out.print("El tiempo que tardará es " + total2);
+      total2 = Math.sqrt(total1);
+      System.out.printf("El tiempo que tarda en caer es %.2f " ,total2);
+      }else{
+      System.out.print("Altura no valida");
+  }
+
     
           
   }
