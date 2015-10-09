@@ -38,11 +38,11 @@ public class Ej8media3notayevaluacion {
       
     }
     
-    if ((media >= 7.00) && (media <= 8.00)) {
+    if ((media >= 7.00) && (media < 9.00)) {
       System.out.println("notable");
     } 
     
-    if ((media >= 8.00) && (media <= 10.00)) {
+    if ((media >= 9.00) && (media <= 10.00)) {
       System.out.println("sobresaliente");
     }
           
