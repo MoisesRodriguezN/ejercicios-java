@@ -17,7 +17,13 @@ public class Ej19numerodedigitos {
     n = Integer.parseInt(System.console().readLine());
     
     if (n < 0) {
-    } n = -1 * n;
+    n = -1 * n;
+    
+  } else {
+    
+  }
+    
+   System.out.print(": ");
     
     if ( n < 10 ) {
       digitos = "1 cifra" ;
