@@ -12,6 +12,6 @@ public class Ej17ultimacifranumero {
     
     System.out.print("Introduce un número entero ");
     int n = Integer.parseInt(System.console().readLine());
-    System.out.println("La última cifra del número introducido es el " + (n % 10));
+    System.out.println("La última cifra del número introducido es el " + (n % 100));
   }
 }
