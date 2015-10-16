@@ -3,7 +3,7 @@
  *
  * @author Moisés Rodríguez Naranjo
  */
-public class Ej2whilemultiplosde5 {
+public class Ej3dowhilemultiplosde5 {
   public static void main(String[] args) {
     
     int i = 5;
