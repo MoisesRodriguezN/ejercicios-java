@@ -18,17 +18,23 @@ public class Ej7cajafuerte {
         
     if (combinacion == 320) {
       
-    System.out.print("La caja fuerte se ha abierto satisfactoriamente");
+    System.out.print("La caja fuerte se ha abierto satisfactoriamente"); //Primer intento de combinación
       
     }else{
       do {
         
-      if (intentos >= 0)  {
+      if (intentos >= 0)  { //Se comprueba el número de intentos, si quedan, se continua pidiendo la combinacion
      
-      System.out.print("Lo siento, esa no es la combinación.");
+      System.out.print("Lo siento, esa no es la combinación. ");
       System.out.println("Introducela de nuevo");
       linea = System.console().readLine();
       combinacion = Integer.parseInt( linea );
+      if (combinacion == 320) {  //Si en este segundo intento se acierta, la caja se abre y el programa termina
+      System.out.print("La caja fuerte se ha abierto satisfactoriamente");
+      break;
+      }else{ //si no se acierta la combinación anterior, se volverá a pedir, restando un intento.
+      
+      }
       intentos -- ;
       }} while (intentos >0) ;
       
