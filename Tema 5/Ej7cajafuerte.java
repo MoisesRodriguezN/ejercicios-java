@@ -36,24 +36,9 @@ public class Ej7cajafuerte {
       
       }
       intentos -- ;
-      }} while (intentos >0) ;
-      
-      
+      }  } while (intentos >0) ;
     
-       
-     
-     
-      
-        
-
-     
-     
-     
-      
-     
-    
-    
-   }     
+    }     
      
   }
 }
