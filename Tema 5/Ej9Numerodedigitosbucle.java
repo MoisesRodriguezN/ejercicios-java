@@ -25,7 +25,7 @@ int n;
     while (n > 10) {
     
   
-      digitos = "2 cifras";
+    
 
     
     } 
