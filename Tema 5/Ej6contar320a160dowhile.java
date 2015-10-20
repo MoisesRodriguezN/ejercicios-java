@@ -11,7 +11,7 @@ public class Ej6contar320a160dowhile {
         
      do {
       System.out.println(i);
-      i += -20;
+      i -= 20;
     } while (i >159);
     
   }
