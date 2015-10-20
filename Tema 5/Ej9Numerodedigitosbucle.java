@@ -6,27 +6,31 @@ public class Ej9Numerodedigitosbucle {
   public static void main(String[] args) {
    
    
-  int n; 
-  String digitos = "";
-    
+  int num = 0; 
+  int cifra = 0; 
+
     System.out.print("Introduce un numero");
     System.out.print(": ");
-    n = Integer.parseInt(System.console().readLine());
+    num = Integer.parseInt(System.console().readLine());
     
-    if (n < 0) {
-    n = -1 * n;
+    
+    if (num < 0) {
+    num = -1 * num;
     
   } else {
     
-  }
-    
-   System.out.print(": ");
+    while (num > 0) {
+      num = num /10;
+      cifra ++;
       
-    while (n > 10) {
-    digitos = 
-   
-    } 
-    System.out.println("El número de cifras es " + digitos);
+    }
+    
+     System.out.print(": ");
   
-  }
+     System.out.println("El número de cifras es " + cifra);
+     
+    
+   }
+}
+
 }
