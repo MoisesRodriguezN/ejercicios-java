@@ -23,11 +23,8 @@ public class Ej9Numerodedigitosbucle {
    System.out.print(": ");
       
     while (n > 10) {
-    
+    digitos = 
    
-    
-
-    
     } 
     System.out.println("El número de cifras es " + digitos);
   
