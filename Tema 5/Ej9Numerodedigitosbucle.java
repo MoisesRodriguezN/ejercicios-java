@@ -13,24 +13,19 @@ public class Ej9Numerodedigitosbucle {
     System.out.print(": ");
     num = Integer.parseInt(System.console().readLine());
     
-    
     if (num < 0) {
-    num = -1 * num;
+      num = -1 * num;
     
-  } else {
+    } else {
     
     while (num > 0) {
       num = num /10;
       cifra ++;
       
     }
-    
-     System.out.print(": ");
   
      System.out.println("El número de cifras es " + cifra);
      
-    
-   }
-}
-
+    }
+  }
 }
