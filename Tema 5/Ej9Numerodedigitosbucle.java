@@ -6,10 +6,10 @@ public class Ej9Numerodedigitosbucle {
   public static void main(String[] args) {
    
    
-int n; 
- String digitos = "";
+  int n; 
+  String digitos = "";
     
-    System.out.print("Introduce un numero de máximo 5 cifras");
+    System.out.print("Introduce un numero");
     System.out.print(": ");
     n = Integer.parseInt(System.console().readLine());
     
@@ -24,7 +24,7 @@ int n;
       
     while (n > 10) {
     
-  
+   
     
 
     
