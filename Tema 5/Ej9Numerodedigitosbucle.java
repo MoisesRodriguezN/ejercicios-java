@@ -18,8 +18,10 @@ public class Ej9Numerodedigitosbucle {
     
     } else {
     
-    while (num > 0) {
-      num = num /10;
+    while (num > 0) {  
+      num = num /10; // va quitando cifras. Cada vez que quita una, suma +1 a cifra hasta que no queden cifras. 
+                     // 134 /10 = 13 --> 1 cifra 13/10 = 1 --> 2 cifras 1 /10 = 0 --> 3 cifras.
+                     // Como num no es mayor a 0, se sale del bucle y muestra el número de cifras.
       cifra ++;
       
     }
