@@ -9,16 +9,29 @@ public class Ej14CalcularUnaPotencia{
     int base;
     int exponente;
     int potencia = 1;
-    System.out.println("Introduce una base");
-    base = Integer.parseInt(System.console().readLine());
-    System.out.println("Introduce un exponente");
-    exponente = Integer.parseInt(System.console().readLine());
+    do {  //El bucle re repite mientras la base sea menor que 0
+      System.out.println("Introduce una base");
+      base = Integer.parseInt(System.console().readLine());
+      if (base < 0) {  //comprueba que sea menor que 0 para mostrar el mensaje
+        System.out.println("No se admiten números negativos");
+      }
+    } while (base <0);
     
+    do {
+      System.out.println("Introduce un exponente");
+      exponente = Integer.parseInt(System.console().readLine());
     
-    for (int i = 0; i < exponente; i++) {   //se declara i como 0, i debe ser menor que el exponente.
-      // mientras i sea menor al exponente, se sumará 1 a i hasta que sea igual o mayor al exponente.
+      if ((base < 0) || (exponente < 0)) {
+        System.out.println("No se admiten números negativos");
+      }
+    } while (exponente <0);
+        
+    
+      for (int i = 0; i < exponente; i++) {   //se declara i como 0, i debe ser menor que el exponente.
+        // mientras i sea menor al exponente, se sumará 1 a i hasta que sea igual o mayor al exponente.
         potencia *= base;
       }
     System.out.println("El resultado de la potencia es " + potencia);
+      
   }
 }
