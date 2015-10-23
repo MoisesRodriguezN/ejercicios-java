@@ -19,6 +19,7 @@ public class Ej12PrimerosTerminosFIbonacci{
     f2 = 1;
     
     System.out.println("Resultado:");
+     System.out.print("0,");
     
     do {
       System.out.print(f2 + "," );
