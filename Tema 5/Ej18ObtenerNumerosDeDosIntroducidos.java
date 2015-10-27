@@ -38,9 +38,9 @@ public class Ej18ObtenerNumerosDeDosIntroducidos{
         System.out.print(numeroIntroducido1 + ",");
       } while (numeroIntroducido1<numeroIntroducido2);
       
-     //si el número introducido 1 es menor al introducido 2, se empieza
+     // si el número introducido 1 es menor al introducido 2, se empieza
      // a contar de 7 en 7 sobre el número introducido 1. 
-     //Si no, contará de 7 en 7 sobre el numero introducido 2.
+     // Si no, contará de 7 en 7 sobre el numero introducido 2.
     
     } else {
     }
