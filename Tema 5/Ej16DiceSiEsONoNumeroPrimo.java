@@ -13,9 +13,8 @@ public class Ej16DiceSiEsONoNumeroPrimo{
     boolean esPrimo = true; 
     
     for (int i = 2; i < numeroIntroducido; i++) { //se declara i con valor 2
-      System.out.println(i);
       // si número i es menor que numeroIntroducido, se incrementa en 1 i
-      if ((numeroIntroducido % i) == 0) { // El resto de dividir numeroIntroducido entre i
+      if ((numeroIntroducido % i)  == 0 ) { // El resto de dividir numeroIntroducido entre i
         //Si el resto es 0, no es primo
         esPrimo = false; 
       }

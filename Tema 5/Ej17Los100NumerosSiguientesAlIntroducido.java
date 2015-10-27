@@ -20,8 +20,11 @@ public class Ej17Los100NumerosSiguientesAlIntroducido{
     
     System.out.println("Sumando 100 números al digito introducido:");
     
-    for (int i = numeroIntroducido; i <= numeroIntroducido+100; i++){
+    int suma = 0;
+    for (int i = numeroIntroducido; i <= numeroIntroducido+99; i++){
       System.out.println(i);
+      suma += i;
     }
+    System.out.println("total = " + suma);
   }
 }

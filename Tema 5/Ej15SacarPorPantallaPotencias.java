@@ -11,22 +11,22 @@ public class Ej15SacarPorPantallaPotencias{
     int base;
     int exponente;
     int eleva = 0;
-    do {  //El bucle re repite mientras la base sea menor que 0
+    do {  //El bucle re repite mientras la base sea menor o igual que 0
       System.out.println("Introduce una base");
       base = Integer.parseInt(System.console().readLine());
-      if (base < 0) {  //comprueba que sea menor que 0 para mostrar el mensaje
-        System.out.println("No se admiten números negativos");
+      if (base <= 0) {  //comprueba que sea menor o igual que 0 para mostrar el mensaje
+        System.out.println("No se admiten números negativos o base 0");
       }
-    } while (base <0);
+    } while (base <=0);
     
     do {
       System.out.println("Introduce un exponente");
       exponente = Integer.parseInt(System.console().readLine());
     
-      if ((base < 0) || (exponente < 0)) {
-        System.out.println("No se admiten números negativos");
+      if ((base <= 0) || (exponente <= 0)) {
+        System.out.println("No se admiten números negativos o exponente 0");
       }
-    } while (exponente <0);
+    } while (exponente <=0);
         
     
     for (eleva = 1; eleva <= exponente; eleva++){ //empieza a elevar desde 1
@@ -36,5 +36,14 @@ public class Ej15SacarPorPantallaPotencias{
       System.out.println(eleva);
     }
     
+    int potencia = 1;
+    for (int i = 0; i < exponente; i++) {
+      potencia = potencia * base;
+      System.out.print(" ," + potencia);
+      
+      
+      
+    }
+
   }
 }
