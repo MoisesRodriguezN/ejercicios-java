@@ -12,27 +12,32 @@ public class Ej21CuentanumerosMediaImparesMayorPares{
     int contadorImpar = 0;
     int numeroIntroducido = 0;
     int sumaImpar = 0;
+    int mayorPar = 0;
     
     do {  
      
       System.out.println("Introduce un número positivo");
       numeroIntroducido = Integer.parseInt(System.console().readLine());
       if (numeroIntroducido >= 0) {
-        contador++;
+        contador++;  //Se cuenta la cantidad de números introducidos 
         if (numeroIntroducido %2!=0){
           sumaImpar += numeroIntroducido;
           contadorImpar++;
-        } 
-        
+      //Se suman en "sumaImpar" los numeros introducidos impares
+      //Se cuentan los números impares para desues hacer la media
+       
       } else {
-       break;
+        if (numeroIntroducido > mayorPar)
+        mayorPar = numeroIntroducido;
+        }
       }
+      
+      // si no es impar, es par, 
     } while (numeroIntroducido >=0);
     
-     System.out.println("Se han introducido " + contador + " números");
-      System.out.println("La media de los números impares es: " + (sumaImpar/contadorImpar));
+    System.out.println("El mayor de los pares es" + mayorPar);
+    System.out.println("Se han introducido " + contador + " números");
+    System.out.println("La media de los números impares es: " + (sumaImpar/contadorImpar));
   
-    
-    
   }
 }

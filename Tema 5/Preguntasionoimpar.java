@@ -5,7 +5,7 @@
  * @author Luis José Sánchez
  */
 
-public class TerminaCuandoEsImpar {
+public class Preguntasionoimpar {
     
   public static void main(String[] args) {
         
