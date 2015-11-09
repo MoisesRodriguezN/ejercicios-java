@@ -1,7 +1,7 @@
 /**
- * Realiza un programa que llene la pantalla de caracteres aleatorios (a lo Matrix) con el código
- * ascii entre el 32 y el 126. Puedes hacer casting con (char) para convertir un entero en un
- * carácter.
+ * Escribe un programa que simule la tirada de dos dados. El programa deberá continuar
+ * tirando los dados una y otra vez hasta que en alguna tirada los dos dados tengan el mismo
+ * valor.
  *
  * @author Moisés Rodríguez Naranjo
  */
