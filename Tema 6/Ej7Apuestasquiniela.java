@@ -10,27 +10,35 @@ public class Ej7Apuestasquiniela {
     int columnas = 0;
     int apuesta = 0;
     int fila = 0;
-    int contador = 1;
-  
+    int i = 1;
+    String pleno = "";
     do {
       fila ++;
-      for (int i = 1; i <= 3; i++) {
-        System.out.print( "      " + fila );
+      if (fila == 15){
+       pleno = "\npleno al";
+       }
+      System.out.print(pleno);
+      for (i = 1; i <= 3; i++) {
+        System.out.print( "  " + fila );
         apuesta = (int)(Math.random()*3 +1);  
+      
+       
         switch (apuesta){
-          case 1: System.out.println("| 1 |   |   |       ");
+          case 1: System.out.print(" | 1 |   |   |   ");
           break;
-          case 2: System.out.println("|   | x |   |       ");
-          break;
-          case 3: System.out.println("|   |   | 2 |       ");
+          case 2: System.out.print(" |   | x |   |   ");
+          break; 
+          case 3: System.out.print(" |   |   | 2 |   ");
           break;
           default:
           break;
         }
+       if (fila == 15){
+       i = 3;
+       }
       }
-      contador ++;
-     
-    } while(contador <16);
-    
+    System.out.println();
+    } while(fila <15);
+ 
   }
 }
