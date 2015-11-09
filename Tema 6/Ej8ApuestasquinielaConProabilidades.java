@@ -1,10 +1,11 @@
 /**
- * Escribe un programa que muestre tres apuestas de la quiniela en tres columnas para los 14
- * partidos y el pleno al quince (15 filas).
+ * Modifica el programa anterior para que la probabilidad de que salga un 1 sea de 1/2, la
+ * probabilidad de que salga x sea de 1/3 y la probabilidad de que salga 2 sea de 1/6. Pista: 1/2
+ * = 3/6 y 1/3 = 2/6.
  *
  * @author Moisés Rodríguez Naranjo
  */
-public class Ej7Apuestasquiniela {
+public class Ej8ApuestasquinielaConProabilidades {
   public static void main(String[] args) {
     
     int columnas = 0;
@@ -15,23 +16,26 @@ public class Ej7Apuestasquiniela {
     do {
       fila ++;
       if (fila == 15){
-       pleno = "\npleno al";
+       pleno = "\nPleno al";
        }
       System.out.print(pleno);
       for (i = 1; i <= 3; i++) {
         System.out.print( "  " + fila );
-        apuesta = (int)(Math.random()*3 +1);  
+        apuesta = (int)(Math.random()*6 +1);  
       
        
         switch (apuesta){
-          case 1: System.out.print(" | 1 |   |   |   ");
+          case 1: 
+          case 2:
+          case 3: System.out.print(" | 1 |   |   |   ");
           break;
-          case 2: System.out.print(" |   | x |   |   ");
+          case 4:
+          case 5: System.out.print(" |   | x |   |   ");
           break; 
-          case 3: System.out.print(" |   |   | 2 |   ");
+          case 6: System.out.print(" |   |   | 2 |   ");
           break;
           default:
-          break;
+         
         }
        if (fila == 15){
        i = 3;

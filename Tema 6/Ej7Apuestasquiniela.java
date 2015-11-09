@@ -15,7 +15,7 @@ public class Ej7Apuestasquiniela {
     do {
       fila ++;
       if (fila == 15){
-       pleno = "\npleno al";
+       pleno = "\nPleno al";
        }
       System.out.print(pleno);
       for (i = 1; i <= 3; i++) {
