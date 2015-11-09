@@ -13,7 +13,7 @@ public class Ej5NumerosAleatoriosMaximoMinimoYMedia {
     int suma = 0;
 
     for (int i = 1; i <= 50; i++) {
-      numero = (int)(Math.random()*99 +100);
+      numero = (int)(Math.random()*100 +100);
       System.out.print(numero + " ");
         if (numero > maximo){
           maximo = numero;
