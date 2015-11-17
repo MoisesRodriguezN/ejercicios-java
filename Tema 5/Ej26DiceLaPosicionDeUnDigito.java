@@ -37,5 +37,4 @@ public class Ej26DiceLaPosicionDeUnDigito{
     
     System.out.println();
   }
-}
-
+}78
