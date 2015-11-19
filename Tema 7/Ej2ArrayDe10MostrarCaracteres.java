@@ -10,7 +10,7 @@
 public class Ej2ArrayDe10MostrarCaracteres {
   public static void main(String[] args) {
         
-    char [] simbolo = new char[10]; // se reserva espacio para 10 símbolos
+    char [] simbolo = new char[10]; // se reserva espacio para 10 caracteres
             
     simbolo[0] = 'a' ;
     simbolo[1] = 'X' ;

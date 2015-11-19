@@ -11,7 +11,7 @@ public class Ej3ArrayLee10NumerosYMuestraEnOrdenInverso {
         
     int[] n = new int[10]; //define n como array de enteros
     //Lee 10 números y los guarda en el array
-    System.out.println("Introdice 10 numeros: ");
+    System.out.println("Introduce 10 numeros: ");
     for (int i = 0 ; i < 10; i++){ 
       n[i] = Integer.parseInt(System.console().readLine());
     }
