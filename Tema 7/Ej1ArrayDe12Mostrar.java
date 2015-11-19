@@ -20,7 +20,7 @@ public class Ej1ArrayDe12Mostrar {
     num[9] = 120;
     
     System.out.print("Los valores del array n son los siguientes: ");
-    for (int i = 0; i < 12; i++){
+    for (int i = 0; i < 12; i++){ //EL bucle recorre el array y lo muestra
       System.out.print(num[i] + " ");
     }
     

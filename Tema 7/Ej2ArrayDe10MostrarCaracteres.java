@@ -20,7 +20,7 @@ public class Ej2ArrayDe10MostrarCaracteres {
     simbolo[8] = 'Q' ;
     
     System.out.print("Los valores del array n son los siguientes: ");
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 10; i++){  //EL bucle recorre el array y lo muestra
       System.out.print(simbolo[i] + " ");
     }
     
