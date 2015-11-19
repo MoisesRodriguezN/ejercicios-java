@@ -29,10 +29,10 @@ public class Ej4DefinirTresArrayNumeroCuadradoYCubo {
       cubo[indice1] = numero[indice1] * numero[indice1] * numero[indice1];
     }//Calcula el cubo de los números almacenados en el array
     
-    System.out.println("Número   " + "Cuadrado    " + "Cubo");
+    System.out.println("  Número  " + "Cuadrado   " + "Cubo");
   
     for (int indice1 = 0 ; indice1 < 20; indice1 ++){
-      System.out.printf("\n%S    %S   %S", numero[indice1], cuadrado[indice1], cubo[indice1] );
+      System.out.printf("\n%6S %8S %10S", numero[indice1], cuadrado[indice1], cubo[indice1] );
     }
     
   }

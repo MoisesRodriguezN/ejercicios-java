@@ -19,26 +19,26 @@ public class Ej5ArrayDe10yDiceMaximoYMinimo {
     
     for (i = 0; i < 10; i++) {
       numero[i] = Integer.parseInt(System.console().readLine());
-
+      //guarda 10 númerosen el array
       if (numero[i] > maximo){
-          maximo = numero[i];
+          maximo = numero[i]; //guarda el número mayor introducido
       }
       if (numero[i] < minimo){
-        minimo = numero[i];
+        minimo = numero[i]; //guarda el número menor introducido
       }
     }
     
     System.out.println();
       
     for (i = 0; i < 10; i++) {
-      System.out.print(numero[i]);
+      System.out.print(numero[i]); //muestra todos los números del array
       if (numero[i] == maximo) {
         System.out.print(" máximo");
-      }
+      } //Si elnúmero mostrado es el máximo, se muestra  a la derecha "maximo"
       
       if (numero[i] == minimo) {
         System.out.print(" mínimo");
-      }
+      } //Si elnúmero mostrado es el mínimo, se muestra  a la derecha "mínimo"
       System.out.println();
     }
 	}
