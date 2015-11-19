@@ -21,8 +21,8 @@ public class Ej6Arrayde15ROTAR1Posicion {
     }//guarda 15 números en el array
     
     System.out.println("Array original");
-    for (i = 0; i < 15; i++){
-      System.out.printf("|%2d ", numero[i]);
+    for (int n : numero){ //Estilo foreach
+      System.out.printf("|%2d ", n);
     }//muestra el arrray original
     
     // rotación derecha
