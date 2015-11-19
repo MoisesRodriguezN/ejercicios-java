@@ -19,8 +19,9 @@ public class Ej1ArrayDe12Mostrar {
     num[9] = 120;
     
     System.out.print("Los valores del array son los siguientes: ");
+    System.out.println();
     for (int i = 0; i < 12; i++){ //El bucle recorre el array y lo muestra
-      System.out.print(num[i] + " ");
+      System.out.print(num[i] + " | ");
     }
     
    //Los que no son inicializados se ponen en 0. 
