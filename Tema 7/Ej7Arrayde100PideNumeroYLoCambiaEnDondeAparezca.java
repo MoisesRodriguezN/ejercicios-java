@@ -15,7 +15,7 @@ public class Ej7Arrayde100PideNumeroYLoCambiaEnDondeAparezca {
     int i;
   
     
-    // Rellena el array con números aleatórios del 0 al 20
+    // Rellena el array con números aleatórios del 0 al 20 y los muestra
     for (i = 0; i < 100; i++) {
       numero[i] = (int)(Math.random() * 21);
       System.out.print(numero[i] + "  ");
