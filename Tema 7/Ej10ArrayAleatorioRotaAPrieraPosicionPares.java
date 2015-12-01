@@ -10,16 +10,18 @@
 public class Ej10ArrayAleatorioRotaAPrieraPosicionPares {
   public static void main(String[] args) {
         
-    int[] numero = new int[100];
+    int[] numero = new int[20];
     int i;
-    int[] numero2 = new int[100];
-    int[] arraypar = new int[100];
-    int[] arrayimpar = new int[100];
+    int indicePar = 0;
+    int indiceImpar = 0;
+    int[] numero2 = new int[20];
+    int[] arraypar = new int[20];
+    int[] arrayimpar = new int[20];
    
     System.out.println("Introduce números enteros");
     
-    //guarda 100 números aleatorios en el array
-    for (i = 0; i < 100; i++) {
+    //guarda 20 números aleatorios en el array
+    for (i = 0; i < 20; i++) {
       numero[i] = (int)(Math.random()*101); 
     }
     
@@ -28,33 +30,31 @@ public class Ej10ArrayAleatorioRotaAPrieraPosicionPares {
     for (int n : numero){ //Estilo foreach
       System.out.printf("|%2d ", n);
     }
-    
-    //Pasa a las primeras posiciones los números pares
-    for (i = 99; i > 0; i--){
+  
+    for (i = 0; i < 20; i++) {
       if ((numero[i] % 2) == 0){
-        numero2[i] = numero [i - 1];
-      }
-    }
-    System.out.println();
-    System.out.println("Array rotado");
-    
- 
-    for (i = 0; i < 100; i++) {
-      if ((numero[i] % 2) == 0){
-        arraypar[i] = numero[i];
-        System.out.printf("|%2d ", arraypar [i]); 
-        //Guarda en un array los pares y los muestra
+        arraypar[indicePar++] = numero[i];
+        //Guarda en un array los pares y crea un indice de números pares
       }else{
        arrayimpar[i] = numero[i]; 
        //Guarda en un array los impares
       }
-    } //Muestra el array de pares en primeras posiciones
+    } 
     
-    for (i = 0; i < 100; i++) { 
-      if (arrayimpar [i] != 0){
-        System.out.printf("|%2d ", arrayimpar [i]); 
-    //Muestra array de impares en las posiciones restantes
-      }
+    for (i = 0; i < indicePar; i++) {
+      numero[i] = arraypar[i] ;
     }
+    //Guarda en las primeras posiciones del array original los números pares
+     System.out.println("Array de pares e impares");
+   
+    for (i = 0; i < 20; i++) {
+      if (arrayimpar[i] !=0){ //Los que estan vacio no los muestra
+        numero[indicePar++] = arrayimpar[i] ;
+      } //Guarda en el array original los impares, despues de las posiciones pares
+    }
+    
+    for (i = 0; i < 20; i++) {
+    System.out.printf("|%2d ", numero [i]); 
+    } //Muestra el array oiriginal rotado.
   }
 }
