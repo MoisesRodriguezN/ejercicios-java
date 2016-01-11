@@ -25,12 +25,12 @@ public class Ej5Array4F5CaleatorioYPosicionMaximoMinimo {
   
     int fila;
     int columna;
-    int maximo = 0;
-    int minimo = 9999;
-    int fmax = 0;
-    int cmax = 0;
-    int fmin = 0;
-    int cmin = 0;
+    int maximo = 0;     //Integer.MAX_VALUE;
+    int minimo = 9999;  //Integer.MIN_VALUE;
+    int fmax = 0; //Máximo filas
+    int cmax = 0; //Maximo columnas
+    int fmin = 0; //Mínimo filas
+    int cmin = 0; //Mínimo columnas
  
     
     //lectura datos array
