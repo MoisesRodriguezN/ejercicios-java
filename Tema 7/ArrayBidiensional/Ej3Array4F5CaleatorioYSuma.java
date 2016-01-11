@@ -1,10 +1,8 @@
-/*
+/**
  * Modifica el programa anterior de tal forma que los números que se introducen en el array
  * se generen de forma aleatoria (valores entre 100 y 999).
- */
-
-
-/**
+ *
+ *
  *
  * @author Moises Rodríguez
  */
@@ -22,18 +20,18 @@ public class Ej3Array4F5CaleatorioYSuma {
   int[] sumatotalcolumna = new int[5]; 
   
   
-    int fila;
-    int columna;
-    int suma = 0;
-    int sumatotalcolumnas = 0;
-    int contador = 0;
-    int sumatotal = 0;
+      int fila;
+      int columna;
+      int suma = 0;
+      int sumatotalcolumnas = 0;
+      int contador = 0;
+      int sumatotal = 0;
     
     //lectura datos array
     for (fila = 0; fila <= 3; fila++) { //filas
    
       for (columna = 0; columna <= 4; columna++) { //clumnas
-        num[fila][columna] = (int)(Math.random()*100 + 900 );
+        num[fila][columna] = (int)(Math.random()*900 + 1000 );
         suma += num[fila][columna]; //suma total de la fila
       }
       sumatotalfila[fila] = suma; //se guarda en array cada total de cada columna
@@ -54,7 +52,7 @@ public class Ej3Array4F5CaleatorioYSuma {
     for (fila = 0; fila <= 3; fila++) {
      System.out.print ("fila nº " + fila + "|");
     for (columna = 0; columna <= 4; columna++) {
-        System.out.printf("%4d |", num[fila][columna]);
+      System.out.printf("%4d |", num[fila][columna]);
     }
       //Por cada fila imprime el total
       System.out.println("  " + sumatotalfila[fila]);

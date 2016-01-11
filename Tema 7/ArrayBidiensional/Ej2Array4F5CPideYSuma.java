@@ -24,12 +24,12 @@ public class Ej2Array4F5CPideYSuma {
   int[] sumatotalcolumna = new int[5]; 
   
   
-    int fila;
-    int columna;
-    int suma = 0;
-    int sumatotalcolumnas = 0;
-    int contador = 0;
-    int sumatotal = 0;
+  int fila;
+  int columna;
+  int suma = 0;
+  int sumatotalcolumnas = 0;
+  int contador = 0;
+  int sumatotal = 0;
     
     //lectura datos array
     for (fila = 0; fila <= 3; fila++) { //filas

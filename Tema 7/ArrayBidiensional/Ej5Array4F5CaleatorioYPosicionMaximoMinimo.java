@@ -1,4 +1,4 @@
-/*
+/**
  * Realiza un programa que rellene un array de 6 filas por 10 columnas con números enteros
  * positivos comprendidos entre 0 y 1000 (ambos incluidos). A continuación, el programa
  * deberá dar la posición tanto del máximo como del mínimo.
@@ -67,21 +67,23 @@ public class Ej5Array4F5CaleatorioYPosicionMaximoMinimo {
         System.out.printf("%4d |", num[fila][columna]);
         if (num[fila][columna] == maximo) {
        
-          fmax = fila;
-          cmax = columna;
+          fmax = fila; //Posicion de la fila con el número máximo
+          cmax = columna; //Posicion de la columna con el número máximo
         }
         if (num[fila][columna] == minimo ) {
         
-          fmin = fila;
-          cmin = columna;
+          fmin = fila; //Posicion de la fila con el número mínimo
+          cmin = columna; //Posicion de la columna con el número mínimo
         }
       } 
       System.out.println();
       
     }
  
-      System.out.println("El número máximo está en la posición:  " + fmax + cmax );
-      System.out.print("El número mínimo está en la posición:  " + fmin + cmin );
+      System.out.println("El número máximo está en la posición:  " + fmax + cmax + 
+      "  Fila " + fmax + "  Columna " + cmax);
+      System.out.print("El número mínimo está en la posición:  " + fmin + cmin + 
+      "  Fila " + fmin + "  Columna " + cmin);
     
   }
 }
