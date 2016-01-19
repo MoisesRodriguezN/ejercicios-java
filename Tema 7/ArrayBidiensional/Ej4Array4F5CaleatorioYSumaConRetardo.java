@@ -81,7 +81,7 @@ public class Ej4Array4F5CaleatorioYSumaConRetardo {
   }while(columna <5);
    
   //Imprime la suma de los totales de cada fila
-  Thread.sleep(200); //Retardo de 2 segundos
+  Thread.sleep(2200); //Retardo de 2 segundos
   System.out.print("  " + sumatotal);
   }
 }
