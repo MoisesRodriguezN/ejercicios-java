@@ -4,6 +4,7 @@
     Author     : moises
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,8 +18,9 @@
             double y = 166.386;
 
             double mul = x * y;
-
-            out.print(x  + " euros son  " + mul + "  pesetas");
+            DecimalFormat dosdecimas = new DecimalFormat("0.00");
+            
+            out.print(x  + " euros son  " + dosdecimas.format(mul) + "  pesetas");
          %>
     </body>
 </html>

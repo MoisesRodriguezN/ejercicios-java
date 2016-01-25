@@ -19,7 +19,7 @@
                         <label for="inputeuros">Euros</label>
                     </td>
                     <td>
-                        <input type="number" id="inputeuros" name="euros">
+                        <input type="number" min="0" step="0.01" id="inputeuros" name="euros">
                     </td>
                 </tr>
                 
