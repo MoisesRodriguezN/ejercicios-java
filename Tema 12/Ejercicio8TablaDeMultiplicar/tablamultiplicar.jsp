@@ -11,17 +11,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tabla de multiplicar</title>
     </head>
-    <body>
-        <h2 style="text-align: center;  box-shadow: #242424 4px 4px 4px;"> 
+    <body style="background-color: deepskyblue">
+        <h2 style="text-align: center;  box-shadow: #242424 4px 4px 4px; background-color: greenyellow;"> 
             Tabla de multiplicar </h2>
-        <table border="2" style="box-shadow: #242424 4px 4px 4px; margin: auto;">
+        <table border="2" style="box-shadow: #242424 4px 4px 4px; margin: auto; background-color: greenyellow;">
         <%
             String linea;
             int numero;
 
             linea = request.getParameter("numero");
             numero = Integer.parseInt( linea );
-
 
             for (int n = 1; n < 11; n++) {
             out.println("<tr>");
