@@ -19,9 +19,25 @@
                 
                 <tr>
                     <td style="text-align: center">
+                    <img src="billete1.jpg" height="80" width="130" >
+                    </td>
+                    
+                    <td style="text-align: center">
                         <img src="billete1.jpg" height="80" width="130" >
                     </td>
                 </tr>
+                
+                 <tr>
+               
+                    <td>
+                        <label for="inputcantidad">Introduce la cantidad</label> 
+                    </td>
+                    <td>
+                        <input type="number" min="0" step="0.01" id="inputcantidad" name="cantidad">
+                    </td>
+                    
+                </tr>
+                
                 <tr>
                
                     <td>
