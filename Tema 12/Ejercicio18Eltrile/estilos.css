@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #99ff99;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: #242424 2px 2px 1px;
+}
+
+table {
+  background-color: #99ffcc;
+  margin: auto;
+  padding: 20px;
+  box-shadow: #242424 4px 4px 4px;
+  text-align: right;
+  border: 0px;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #aaaadd;
+  color: white;
+  padding: 4px;
+  margin: 2px;
+}
+
+td {
+  padding: 10px;
+}
