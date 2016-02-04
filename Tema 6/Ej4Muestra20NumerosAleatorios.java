@@ -10,7 +10,7 @@ public class Ej4Muestra20NumerosAleatorios {
     int numero = 0;
 
     for (int i = 1; i <= 20; i++) {
-      numero = (int)(Math.random()*11 );
+      numero = (int)(Math.random()*6 + 5 );
       System.out.print(numero + " ");
     }
   }
