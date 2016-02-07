@@ -35,6 +35,6 @@ public class Ej26DiceLaPosicionDeUnDigito{
      //El numero volteado se le hace el modulo 10, resto de dividir entre 10
      //Si el resto es igual al digito introducido, se imprime la posicion
     
-    System.out.println();
+    System.out.println("volteado es " + volteado);
   }
-}78
+}
