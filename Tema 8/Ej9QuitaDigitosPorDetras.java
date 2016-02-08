@@ -1,7 +1,7 @@
 /**
  * Le quita a un número n dígitos por detrás (por la
     derecha)
- * @author Moisés Rodríguez Naranjo
+ * @author Moisés Rodríguez 
  */
 public class Ej9QuitaDigitosPorDetras {
   public static void main(String[] args) {

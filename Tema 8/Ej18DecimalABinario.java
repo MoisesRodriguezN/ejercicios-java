@@ -1,6 +1,6 @@
 /**
  * Binario A Decimal
- * @author Moisés Rodríguez Naranjo
+ * @author Moisés Rodríguez 
  */
 public class Ej18DecimalABinario {
   public static void main(String[] args) {

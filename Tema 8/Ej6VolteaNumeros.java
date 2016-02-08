@@ -1,7 +1,7 @@
 /**
  * Realiza un programa que pida un número por teclado y que luego muestre ese número al
  * revés.
- * @author Moisés Rodríguez Naranjo
+ * @author Moisés Rodríguez
  */
 public class Ej6VolteaNumeros{
   

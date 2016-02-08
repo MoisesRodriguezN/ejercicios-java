@@ -1,9 +1,9 @@
 /**
  * Escribe un programa que pida una base y un exponente (entero positivo) y que calcule la
  * potencia.
- * @author Moisés Rodríguez Naranjo
+ * @author Moisés Rodríguez 
  */
-public class Ej14CalcularUnaPotencia{
+public class Ej4CalculaPotencias{
   
   public static void main(String[] args) {
     int base;
