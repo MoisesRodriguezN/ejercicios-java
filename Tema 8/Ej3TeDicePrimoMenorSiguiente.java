@@ -15,8 +15,9 @@ public class Ej3TeDicePrimoMenorSiguiente {
     System.out.print("Introduce un número para comprobar cual es el siguiente primo: ");
     Scanner s = new Scanner(System.in);
     int numeroIntroducido = Integer.parseInt(s.nextLine());
-    
     boolean esPrimo = true; 
+    
+    numeroIntroducido +=1;
     
     do{
       esPrimo = true;
@@ -29,6 +30,6 @@ public class Ej3TeDicePrimoMenorSiguiente {
     }while(!esPrimo);
      numeroIntroducido--;
     System.out.println("El siguiente número primo es: " + numeroIntroducido);    
+    
   }
-  
 }
