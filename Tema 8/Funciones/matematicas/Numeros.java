@@ -9,7 +9,7 @@ package matematicas;
  *
  * @author moises
  */
-public class numeros {
+public class Numeros {
 
   /**
    * Comprueba que es capicua
@@ -20,7 +20,7 @@ public class numeros {
    */
   
   public static boolean esCapicua(long n) {
-    return n == volteaNumero(n);
+    return n == voltea(n);
   }
   
   /**
@@ -31,19 +31,33 @@ public class numeros {
    * 
    */
 
-  public static long volteaNumero (long n) {
-
+  public static long voltea (long n) {
     
+    long aux = n;
+    if (n < 0){
+      n = Math.abs(n);
+    }
+   
     long numero = n;
     long volteado = 0;
     
-    while (numero > 0) {
-      volteado = (volteado * 10) + (numero % 10);
-      numero /= 10;
-    } 
-   
-    return  volteado;
-  
+    if(numero > 0){
+      while (numero > 0) {
+        volteado = (volteado * 10) + (numero % 10);
+        numero /= 10;
+      }
+    }else{
+        while (numero < 0) {
+        volteado = (volteado * 10) + (numero % 10);
+        numero /= 10;
+      }
+    }
+    
+    if (aux < 0) {
+      return  volteado * (-1) ;
+    } else {
+      return  volteado;
+    }
   }
   
   /**
@@ -53,12 +67,13 @@ public class numeros {
    */
   
   public static boolean esPrimo(int x) {
-    for (int i = 2; i < x; i++) {
-      if ((x % i) == 0) {
-        return false;
+      x= Math.abs(x);
+      for (int i = 2; i < x; i++) {
+        if ((x % i) == 0) {
+          return false;
+        }
       }
-    }
-      return true;
+        return true;
   }
   
   /**
@@ -68,10 +83,9 @@ public class numeros {
    */
   
   public static int siguientePrimo(int n) {
-    boolean esPrimo = true; 
-    int numeroPrimo = 0;
-    n += 1;
+    boolean esPrimo; 
     
+    n += 1;
     do{
       esPrimo = true;
       for (int i = 2; i < n; i++) { 
@@ -81,9 +95,9 @@ public class numeros {
       }
       n++;
     }while(!esPrimo);
+      
     n--;
-    return numeroPrimo = n;
-        
+    return n;  
   }
   
    /**
@@ -93,9 +107,10 @@ public class numeros {
    * @return devuelve la potencia calculada
    */
   
-  public static int calculaPotencia(int base, int exponente) {
+  public static int Potencia(int base, int exponente) {
   
     int potencia = 1;
+    
     
     for (int i = 0; i < exponente; i++) {   //se declara i como 0, i debe ser menor que el exponente.
       // mientras i sea menor al exponente, se sumará 1 a i hasta que sea igual o mayor al exponente.
@@ -105,5 +120,25 @@ public class numeros {
     return potencia;
       
         
+  }
+  
+  /**
+   * Calcula la potencia dada una base y un exponente
+   * @param n un número entero
+   * 
+   * @return devuelve la potencia calculada
+   */
+  public static int digitos(int n) {
+   
+    int cifra = 0;
+    
+    n = Math.abs(n);
+    
+    while (n > 0) {  
+      n = n /10; 
+      cifra ++;
+    }
+  
+    return cifra; 
   }
 }
