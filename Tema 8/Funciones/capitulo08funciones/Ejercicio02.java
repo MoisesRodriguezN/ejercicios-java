@@ -6,7 +6,7 @@
 package capitulo08funciones;
 
 import java.util.Scanner;
-import static matematicas.numeros.esPrimo;
+import static matematicas.Numeros.esPrimo;
 
 /**
  *

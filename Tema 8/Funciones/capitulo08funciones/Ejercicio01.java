@@ -4,7 +4,7 @@
 package capitulo08funciones;
 
 import java.util.Scanner;
-import static matematicas.numeros.esCapicua;
+import static matematicas.Numeros.esCapicua;
 
 /**
  *
