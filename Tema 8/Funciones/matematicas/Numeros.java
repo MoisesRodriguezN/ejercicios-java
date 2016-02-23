@@ -286,16 +286,4 @@ public class Numeros {
     return binario;
   }
   
-  /**
-   * Pasa un número decimal (en base 10) a binario (base 2).
-   * 
-   * @param binario Número binario 
-   * @return        número inicial pasado a decimal
-    */
-  
-  public static int binarioADecimal(String binario) {
-    int decimal = Integer.parseInt(binario,2);
-    return decimal;
-  }
-  
 }
