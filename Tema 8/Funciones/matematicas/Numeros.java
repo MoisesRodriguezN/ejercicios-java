@@ -249,4 +249,53 @@ public class Numeros {
   public static long juntaNumeros(long x, long y) {
     return (long)(x * potencia(10, digitos((int) y))) + y;
   }
+  
+   /**
+   * Pasa un número decimal (en base 10) a binario (base 2).
+   * 
+   * @param decimal número entero en base 10
+   * @return        número inicial pasado a binario
+   */
+  public static long decimalABinario(int decimal) {
+  
+    if (decimal == 0) {
+      return 0;
+    }
+      
+    long binario = 1;
+    
+    while (decimal > 1) {
+      binario = pegaPorDetras(binario, decimal % 2);
+      decimal = decimal / 2;
+    }
+    binario = pegaPorDetras(binario, 1);
+    binario = voltea(binario);
+    binario = quitaPorDetras(binario, 1);
+    
+    return binario;
+  }
+  
+   /**
+   * Pasa un número decimal (en base 10) a binario (base 2).
+   * 
+   * @param decimal número entero en base 10
+   * @return        número inicial pasado a binario
+   */
+  public static String decimalABinario2(int decimal) {
+    String binario = Integer.toBinaryString(decimal); 
+    return binario;
+  }
+  
+  /**
+   * Pasa un número decimal (en base 10) a binario (base 2).
+   * 
+   * @param binario Número binario 
+   * @return        número inicial pasado a decimal
+    */
+  
+  public static int binarioADecimal(String binario) {
+    int decimal = Integer.parseInt(binario,2);
+    return decimal;
+  }
+  
 }
