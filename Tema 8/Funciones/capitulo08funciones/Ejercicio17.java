@@ -1,7 +1,6 @@
 package capitulo08funciones;
 
 import java.util.Scanner;
-import static matematicas.Numeros.binarioADecimal;
 import static matematicas.Numeros.digitoN;
 import static matematicas.Numeros.digitos;
 import static matematicas.Numeros.potencia;
@@ -27,14 +26,6 @@ public class Ejercicio17 {
     
     System.out.println(binario + " en binario es " + decimal + " en decimal.");
     
-    //Método 2
-    System.out.println();
-    System.out.print("Método 2: ");
-    System.out.println();
-    String binario2 = s.nextLine();
-    System.out.print("Introduzca un número binario: ");
-    binarioADecimal(binario2);
-    System.out.println(binario + " en binario es " +  binarioADecimal(binario2) + " en decimal.");
   }
   
 }
