@@ -1,10 +1,9 @@
 package capitulo08funciones;
 
-//import java.util.Scanner;
 
 import java.util.Scanner;
-import matematicas.Arrays;
 import static matematicas.Arrays.maximoArrayInt;
+import static matematicas.Arrays.muestraArrayInt;
 
 
 /**
@@ -23,7 +22,7 @@ public class Ejercicio22 {
     b[i] = Integer.parseInt(s.nextLine()); 
    }
    
-    Arrays.muestraArrayInt(b);
+    muestraArrayInt(b);
    
   // int[] a = {68, 33, 200, 150, 11};
    maximoArrayInt(b);

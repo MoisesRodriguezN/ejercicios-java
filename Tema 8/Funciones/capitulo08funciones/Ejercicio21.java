@@ -1,10 +1,9 @@
 package capitulo08funciones;
 
-//import java.util.Scanner;
 
 import java.util.Scanner;
-import matematicas.Arrays;
 import static matematicas.Arrays.minimoArrayInt;
+import static matematicas.Arrays.muestraArrayInt;
 
 //import static matematicas.Arrays.generaArrayInt;
 //import static matematicas.Arrays.minimoArrayInt;
@@ -25,7 +24,7 @@ public class Ejercicio21 {
     b[i] = Integer.parseInt(s.nextLine()); 
    }
    
-    Arrays.muestraArrayInt(b);
+    muestraArrayInt(b);
    
   // int[] a = {68, 33, 200, 150, 11};
    minimoArrayInt(b);
