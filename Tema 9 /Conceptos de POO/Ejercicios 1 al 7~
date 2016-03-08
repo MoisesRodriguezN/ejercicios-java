@@ -37,5 +37,18 @@ Mineral
 			cuarzo
 			pirita	
 
-3 - 
+3 - ¿Cuáles serían los atributos de la clase Vivienda? ¿Qué subclases se te ocurren?
+
+Atributos: metrosCuadrados,numeroHabitaciones
+Subclases: piso, villa, cortijo, chalet
+
+4 - Piensa en la liga de baloncesto, ¿qué 5 clases se te ocurren para representar
+		5 elementos distintos que intervengan en la liga?
+
+Clases: Jugador, Arbitro, Equipo, Estadio, Partido
+
+5 - Haz una lista con los atributos que podría tener la clase caballo. A continuación
+		haz una lista con los posibles métodos (acciones asociadas a los caballos).
+
+
 						
