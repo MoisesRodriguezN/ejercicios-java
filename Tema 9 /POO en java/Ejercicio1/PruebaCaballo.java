@@ -1,5 +1,4 @@
 
-package poo;
 
 public class PruebaCaballo {
 
@@ -11,7 +10,7 @@ public class PruebaCaballo {
     
     a.relincha();
     
-    System.out.println("Mi peso eso " + a.getPeso()+ " kilos");
+    System.out.println("Mi peso es " + a.getPeso()+ " kilos");
     
     a.trota();
   }
