@@ -21,6 +21,7 @@ public class Ave extends Animal{
     System.out.println("Voy a poner huevos");
   }
  
+  /* 
   int cuentaAgitaAlas = 0;
   public void agitaAlas(){
     cuentaAgitaAlas++;
@@ -29,5 +30,5 @@ public class Ave extends Animal{
     }else{
       System.out.println("No puedo mas, déjame descansar");
     }
-  }
+  }*/
 }
