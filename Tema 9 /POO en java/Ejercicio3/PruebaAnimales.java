@@ -24,7 +24,6 @@ public class PruebaAnimales {
     Pinguino Pinguino1 = new Pinguino("sexo");
     Pinguino1.Vuela();
     
-    Canario Canario1 = new Canario("Sexo");
   }
   
 }
