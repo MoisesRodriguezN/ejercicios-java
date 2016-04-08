@@ -99,9 +99,14 @@ public class PruebaDisco {
           i = -1;
           do{
             i ++;
-          }while(!(album[i].getCodigo().equals(codigoIntroducido)));
+          }while((i < album.length) &&!(album[i].getCodigo().equals(codigoIntroducido)));
         
-          album[i].setCodigo("Libre");
+          if(i < album.length){
+            album[i].setCodigo("Libre");
+          }else{
+            System.out.println("El código introducido no existe ");
+          }
+          
       }
     }while(opcion < 5 || opcion == 0);
   }
