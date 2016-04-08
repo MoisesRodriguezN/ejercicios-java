@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pooArray3;
-
+package pooArray4;
 import java.util.Scanner;
 
 /**
@@ -51,21 +50,26 @@ public class PruebaDisco {
           int libre = -1;
           do{
             libre ++;
-          }while(!(album[libre].getCodigo().equals("Libre")));
+          }while((libre < album.length) && !(album[libre].getCodigo().equals("Libre")));
           
-          System.out.println("Introduce el código del disco: ");
-          String codigo = (s.nextLine());
-          System.out.println("Introduce el autor del disco: ");
-          String autor = (s.nextLine());
-          System.out.println("Introduce el titulo del disco: ");
-          String titulo = (s.nextLine());
-          System.out.println("Introduce el genero del disco: ");
-          String genero = (s.nextLine());
-          System.out.println("Introduce la duración del disco: ");
-          int duracion = Integer.parseInt(s.nextLine());
+          if(libre < album.length){
+            System.out.println("Introduce el código del disco: ");
+            String codigo = (s.nextLine());
+            System.out.println("Introduce el autor del disco: ");
+            String autor = (s.nextLine());
+            System.out.println("Introduce el titulo del disco: ");
+            String titulo = (s.nextLine());
+            System.out.println("Introduce el genero del disco: ");
+            String genero = (s.nextLine());
+            System.out.println("Introduce la duración del disco: ");
+            int duracion = Integer.parseInt(s.nextLine());
           
-          album[libre] = new Disco(codigo, autor, titulo, genero, duracion);
+            album[libre] = new Disco(codigo, autor, titulo, genero, duracion);
           
+          }else{
+            System.out.print("El album está lleno. Borre algún disco para poder crear uno nuevo ");
+          }
+
           break;
         case 3:
           String codigoIntroducido;
