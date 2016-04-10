@@ -30,6 +30,7 @@ public class Disco {
     this.genero = genero;
     this.duracion = duracion;
   }
+  
 
   public String getCodigo() {
     return codigo;

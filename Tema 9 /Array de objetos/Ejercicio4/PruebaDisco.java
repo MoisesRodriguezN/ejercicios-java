@@ -47,24 +47,39 @@ public class PruebaDisco {
           break;
           
         case 2:
+          String codigoIntroducido = "";
           int libre = -1;
           do{
             libre ++;
           }while((libre < album.length) && !(album[libre].getCodigo().equals("Libre")));
-          
+        
           if(libre < album.length){
-            System.out.println("Introduce el código del disco: ");
-            String codigo = (s.nextLine());
+            boolean existeCodigo = true;
+            while (existeCodigo) {
+              existeCodigo = false;
+              System.out.print("Introduce el codigo del disco: ");
+              codigoIntroducido = s.nextLine();
+
+              for (int i = 0; i < 4; i++)
+                if (codigoIntroducido.equals(album[i].getCodigo())) {
+                  existeCodigo = true;
+                }
+
+              if (existeCodigo) {
+                System.out.println("Ese código ya existe en la base de datos.");
+              }
+            }          
+            
+            album[libre].setCodigo(codigoIntroducido);
             System.out.println("Introduce el autor del disco: ");
-            String autor = (s.nextLine());
+            album[libre].setAutor((s.nextLine()));
             System.out.println("Introduce el titulo del disco: ");
-            String titulo = (s.nextLine());
+            album[libre].setTitulo((s.nextLine()));
             System.out.println("Introduce el genero del disco: ");
-            String genero = (s.nextLine());
+            album[libre].setGenero((s.nextLine()));
             System.out.println("Introduce la duración del disco: ");
-            int duracion = Integer.parseInt(s.nextLine());
+            album[libre].setDuracion(Integer.parseInt(s.nextLine()));
           
-            album[libre] = new Disco(codigo, autor, titulo, genero, duracion);
           
           }else{
             System.out.print("El album está lleno. Borre algún disco para poder crear uno nuevo ");
@@ -72,7 +87,6 @@ public class PruebaDisco {
 
           break;
         case 3:
-          String codigoIntroducido;
           System.out.println("Escribe el código del disco a modificar: ");
           codigoIntroducido = s.nextLine();
           int i;
