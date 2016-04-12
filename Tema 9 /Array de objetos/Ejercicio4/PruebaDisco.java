@@ -1,5 +1,4 @@
 
-package pooArray4;
 import java.util.Scanner;
 
 /**
