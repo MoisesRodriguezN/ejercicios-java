@@ -51,13 +51,13 @@ public class Gestisimal {
         
         case 2:
         
-          //Comprueba si hay espacio 
+          //Comprueba la primera posicion libre
         libre = -1;
         do{
           libre ++;
         }while((libre < N) && !(articulo[libre].getCodigo().equals("Libre")));
         
-        
+        //Comprueba si existe el código
         if(libre < N){
           existeCodigo = true;
           String codigoIntroducido = "";
@@ -66,12 +66,12 @@ public class Gestisimal {
             System.out.print("Introduce el codigo del artículo: ");
             codigoIntroducido = s.nextLine();
 
-            for (i = 0; i < N; i++)
+            for (i = 0; i < N; i++)//comprueba si exista el código
               if (codigoIntroducido.equals(articulo[i].getCodigo())) {
                 existeCodigo = true;
               }
 
-            if (existeCodigo) {
+            if (existeCodigo) { 
               System.out.println("Ese código ya existe en la base de datos.");
               }
             }
@@ -93,6 +93,26 @@ public class Gestisimal {
         }
         
         break;
+        
+        case 3: 
+          //Comprueba que existe el codigo del articulo
+          System.out.println("Escribe el código del articulo a borrar: ");
+          String  codigoIntroducido = s.nextLine();
+          i = -1;
+          String codigo="";
+          do{
+            i ++;
+             if (i < N) {
+              codigo = articulo[i].getCodigo();
+            }
+          }while((!(codigo.equals(codigoIntroducido))) && (i < N) );
+         
+          if(i == N){
+            System.out.println("El código del artículo no existe");
+          }else{
+           articulo[i].setCodigo("Libre");
+          System.out.println("Artículo borrado");
+          }
       }
       
     }while(opcion < 7 || opcion == 0);
