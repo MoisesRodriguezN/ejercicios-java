@@ -6,7 +6,7 @@ package pooArray5;
  */
 public class Articulo {
   
-  private String codigo ="libre";
+  private String codigo ="Libre";
   private String descripcion;
   private double precioCompra;
   private double precioVenta;
@@ -57,8 +57,8 @@ public class Articulo {
    String cadena = "------------------------------------------";
    cadena += "\nCódigo: " + this.codigo;  
    cadena += "\nDescripción: " + this.descripcion;    
-   cadena += "\nPrecio de compra: " + this.precioCompra;
-   cadena += "\nPrecio de venta: " + this.precioVenta;
+   cadena += "\nPrecio de compra: " + this.precioCompra + "€";
+   cadena += "\nPrecio de venta: " + this.precioVenta + "€";
    cadena += "\nStock: " + this.stock + " unidades";
    cadena += "\n------------------------------------------";
    return cadena;
