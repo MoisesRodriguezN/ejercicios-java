@@ -18,6 +18,7 @@ public class Gestisimal {
     int libre;
     int stockIntroducido;
     boolean existeCodigo;
+    boolean compruebaMercancia;
     
     for(i = 0; i < N; i++) {
       articulo[i] = new Articulo();
@@ -195,6 +196,48 @@ public class Gestisimal {
               }
           }while(!existeCodigo);
           break;
+          
+        case 6://Salida de Mercancia
+          do{//Vuelve a pedir el código mientras no existe el introducido. 
+            existeCodigo = false;
+            System.out.println("Escribe el código del articulo: ");
+            codigoIntroducido = s.nextLine();
+            i = -1;
+            codigo="";
+            do{
+              i ++;
+              if (i < N) {
+                codigo = articulo[i].getCodigo();
+              }
+            }while((!(codigo.equals(codigoIntroducido))) && (i < N) );//Comprueba que existe al codigo
+
+              if(i == N){
+                System.out.println("El codigo no existe en la base de datos.");  
+              }else{ //Salida de merancia
+                existeCodigo = true;
+                System.out.println("EL stock actual para el artículo es : "
+                  + articulo[i].getStock() + " Unidades");
+               
+                //Comprueba que hay mercancia suficiente
+                do{//Vuelve a pedir la cantidad mientras se intente sacar mas mercancia
+                   // de la disponible
+                  System.out.println("Introduce el número de unidades que salen almacen: ");
+                  stockIntroducido = Integer.parseInt(s.nextLine());
+                if(articulo[i].getStock() < stockIntroducido){
+                  compruebaMercancia = false;
+                  System.out.println("No es posible sacar tantas unidades");
+                  System.out.println("Mercancia Actual: " + articulo[i].getStock() 
+                    + " Unidades\n " + "Mercancia a sacar: " + stockIntroducido + " Unidades");
+                }else{
+                  compruebaMercancia = true;
+                  articulo[i].setStock(articulo[i].getStock() - stockIntroducido);
+                  System.out.println("La mercancia ha salido del almacen."
+                  + "El stock actual es: " + articulo[i].getStock() + " Unidades");
+                }
+                }while(!compruebaMercancia);
+ 
+              }
+          }while(!existeCodigo);
       } 
       
     }while(opcion < 7 || opcion == 0);
