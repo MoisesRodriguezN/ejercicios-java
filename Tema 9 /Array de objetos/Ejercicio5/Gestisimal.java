@@ -17,6 +17,8 @@ public class Gestisimal {
     int opcion;
     int libre;
     int stockIntroducido;
+    String codigo;
+    String codigoIntroducido;
     boolean existeCodigo;
     boolean compruebaMercancia;
     
@@ -62,7 +64,7 @@ public class Gestisimal {
         //Comprueba si existe el código
         if(libre < N){
           existeCodigo = true;
-          String codigoIntroducido = "";
+          codigoIntroducido = "";
           while (existeCodigo) {
             existeCodigo = false;
             System.out.print("Introduce el codigo del artículo: ");
@@ -98,10 +100,12 @@ public class Gestisimal {
         
         case 3: //Baja
           //Comprueba que existe el codigo del articulo y lo borra.
+          do{
+          existeCodigo = false;
           System.out.println("Escribe el código del articulo a borrar: ");
-          String  codigoIntroducido = s.nextLine();
+          codigoIntroducido = s.nextLine();
           i = -1;
-          String codigo="";
+          codigo="";
           do{
             i ++;
              if (i < N) {
@@ -112,9 +116,11 @@ public class Gestisimal {
           if(i == N){
             System.out.println("El codigo no existe en la base de datos.");
           }else{
-           articulo[i].setCodigo("Libre");
-          System.out.println("Artículo borrado");
+            existeCodigo = true;
+            articulo[i].setCodigo("Libre");
+            System.out.println("Artículo borrado");
           }
+          }while(!existeCodigo);
         break;
         
         case 4://Modificación
