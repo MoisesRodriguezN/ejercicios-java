@@ -66,7 +66,7 @@ public class Gestisimal {
             System.out.print("Introduce el codigo del artículo: ");
             codigoIntroducido = s.nextLine();
 
-            for (i = 0; i < N; i++)//comprueba si exista el código
+            for (i = 0; i < N; i++)
               if (codigoIntroducido.equals(articulo[i].getCodigo())) {
                 existeCodigo = true;
               }
@@ -95,7 +95,7 @@ public class Gestisimal {
         break;
         
         case 3: 
-          //Comprueba que existe el codigo del articulo
+          //Comprueba que existe el codigo del articulo y lo borra.
           System.out.println("Escribe el código del articulo a borrar: ");
           String  codigoIntroducido = s.nextLine();
           i = -1;
@@ -108,11 +108,64 @@ public class Gestisimal {
           }while((!(codigo.equals(codigoIntroducido))) && (i < N) );
          
           if(i == N){
-            System.out.println("El código del artículo no existe");
+            System.out.println("El codigo no existe en la base de datos.");
           }else{
            articulo[i].setCodigo("Libre");
           System.out.println("Artículo borrado");
           }
+        break;
+        
+        case 4:
+          do{ //Vuelve a pedir el código mientras no existe el introducido.  
+          existeCodigo = false;
+          System.out.println("Escribe el código del articulo a modificar: ");
+          codigoIntroducido = s.nextLine();
+          i = -1;
+          codigo="";
+          do{
+              i ++;
+              if (i < N) {
+                codigo = articulo[i].getCodigo();
+              }
+            }while((!(codigo.equals(codigoIntroducido))) && (i < N) );//Comprueba que existe al codigo
+
+            
+            if(i == N){
+              System.out.println("El codigo no existe en la base de datos.");
+              
+            }else{
+
+              existeCodigo = true;
+              System.out.println("Introduce los datos, para dejar algo igual pulsa Intro");
+              articulo[i].setCodigo(codigoIntroducido);
+              System.out.print("Introduce la descripción: ");
+
+              String descripcion = s.nextLine();
+              if(!descripcion.equals("")){
+                articulo[i].setDescripcion(descripcion);
+              }
+
+              System.out.print("Introduce el precio de compra: ");
+              String precioCompra = (s.nextLine());
+              if(!precioCompra.equals("")){
+                articulo[i].setPrecioCompra(Double.parseDouble(precioCompra));
+              }
+
+              System.out.print("Introduce el precio de venta: ");
+              String precioVenta = (s.nextLine());
+              if(!precioVenta.equals("")){
+                articulo[i].setPrecioVenta(Double.parseDouble(precioVenta));
+              }
+
+              System.out.print("Introduce  el stock: ");
+              String stock = (s.nextLine());
+              if(!stock.equals("")){
+                articulo[i].setStock(Integer.parseInt(stock));
+              }
+            }
+          }while(!existeCodigo);
+            
+          break;
       }
       
     }while(opcion < 7 || opcion == 0);
