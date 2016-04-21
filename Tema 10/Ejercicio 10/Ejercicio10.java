@@ -1,5 +1,5 @@
 
-package ColeccionesYDiccionarios;
+//package ColeccionesYDiccionarios;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -38,14 +38,24 @@ public class Ejercicio10 {
     m.put("sol", "sun");
   
     do{
-      System.out.print("Introduce una palabra en español: ");
-      palabra= s.nextLine();
-      if (m.containsKey(palabra)) {
-        System.out.println(palabra + " en inglés es " + m.get(palabra));
-      } else {
-        System.out.print("Palabra no conocida.");
+      
+      System.out.println("Diccionario Español-Inglés");
+      System.out.println("✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱");
+      System.out.println("1.    Introducir una palabra");
+      System.out.println("2.    Salir");
+      opcion = Integer.parseInt(s.nextLine());
+      switch(opcion){
+
+        case 1:
+          System.out.print("Introduce una palabra en español: ");
+          palabra= s.nextLine();
+          if (m.containsKey(palabra)) {
+            System.out.println(palabra + " en inglés es " + m.get(palabra));
+          } else {
+            System.out.print("Palabra no conocida.");
+          }   
       }
-   }while((opcion < 3) && (opcion != 0));
+   }while((opcion < 2) && (opcion != 0));
   }
   
 }
