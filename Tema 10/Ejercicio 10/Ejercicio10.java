@@ -38,11 +38,12 @@ public class Ejercicio10 {
     m.put("sol", "sun");
   
     do{
-      
-      System.out.println("Diccionario Español-Inglés");
-      System.out.println("✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱");
-      System.out.println("1.    Introducir una palabra");
-      System.out.println("2.    Salir");
+      System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+      System.out.println("┃ Diccionario Español-Inglés    ┃"); 
+      System.out.println("┃    ▧▧▧▧▧▧▧▧▧▧▧▧▧▧▧▧▧▧▧▧       ┃");
+      System.out.println("┃1.    Introducir una palabra   ┃");
+      System.out.println("┃2.    Salir                    ┃");
+      System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
       opcion = Integer.parseInt(s.nextLine());
       switch(opcion){
 
@@ -52,7 +53,7 @@ public class Ejercicio10 {
           if (m.containsKey(palabra)) {
             System.out.println(palabra + " en inglés es " + m.get(palabra));
           } else {
-            System.out.print("Palabra no conocida.");
+            System.out.println("Palabra no conocida.");
           }   
       }
    }while((opcion < 2) && (opcion != 0));
