@@ -145,30 +145,30 @@ public class Gestisimal {
           break;
           
         case 5://Entrada de mercancia
-          do{//Vuelve a pedir el código mientras no existe el introducido. 
+          do{
+            System.out.print("Introduce el codigo del artículo: ");
             existeCodigo = false;
-            System.out.println("Escribe el código del articulo: ");
             codigoIntroducido = s.nextLine();
-            i = -1;
-            codigo="";
-            do{
-              i ++;
-              if (i < N) {
-                codigo = articulo[i].getCodigo();
-              }
-            }while((!(codigo.equals(codigoIntroducido))) && (i < N) );//Comprueba que existe al codigo
-
-              if(i == N){
-                System.out.println("El codigo no existe en la base de datos.");  
-              }else{ //Entrada de merancia
+            for(Articulo articuloAux : a){ 
+              if(articuloAux.getCodigo().equals(codigoIntroducido)){
+                posicion = a.indexOf(articuloAux);
                 existeCodigo = true;
-                System.out.println("EL stock actual para el artículo es : "
-                  + articulo[i].getStock() + " Unidades");
-                System.out.println("Introduce el número de unidades que entran al almacen: ");
-                articulo[i].setStock(articulo[i].getStock() + Integer.parseInt(s.nextLine()));
-                System.out.println("La mercancia ha entrado en el almacen. "
-                  + "El stock actual es: " + articulo[i].getStock() + " Unidades");
               }
+            }
+            
+           
+            if(existeCodigo){
+              System.out.print("Introduce el stock para el articulo Nº: "
+              + a.get(posicion).getCodigo() + "\nStock:"
+                + " ");
+              stockIntroducido = Integer.parseInt(s.nextLine());
+              a.get(posicion).setStock(a.get(posicion).getStock()+ stockIntroducido);
+              System.out.print("\nStock modificado correctamente\n");
+            }
+
+            if(!existeCodigo){
+                System.out.println("\nNo existe el código del articulo\n");
+            }
           }while(!existeCodigo);
           break;
           
