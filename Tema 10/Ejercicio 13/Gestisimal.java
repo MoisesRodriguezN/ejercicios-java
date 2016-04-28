@@ -22,6 +22,7 @@ public class Gestisimal {
     
     int i;
     int opcion;
+    int posicion = 0;
     String codigo;
     String codigoIntroducido;
     String descripcionIntroducia;
@@ -70,7 +71,8 @@ public class Gestisimal {
               }  
             }
           }while(existeCodigo);
-              
+          
+        //Pide los datos y guarda el artículo
           System.out.print("Introduce la descripción: ");
           descripcionIntroducia = s.nextLine();
           System.out.print("Introduce el precio de compra: ");
@@ -85,27 +87,26 @@ public class Gestisimal {
         break;
         
         case 3: //Baja
-          //Comprueba que existe el codigo del articulo y lo borra.
+          //Comprueba que existe el codigo del articulo y borra el artículo.
           do{
-          existeCodigo = false;
-          System.out.println("Escribe el código del articulo a borrar: ");
-          codigoIntroducido = s.nextLine();
-          i = -1;
-          codigo="";
-          do{
-            i ++;
-             if (i < N) {
-              codigo = articulo[i].getCodigo();
+            System.out.print("Introduce el codigo del artículo: ");
+            existeCodigo = false;
+            codigoIntroducido = s.nextLine();
+            for(Articulo articuloAux : a){ 
+              if(articuloAux.getCodigo().equals(codigoIntroducido)){
+                posicion = a.indexOf(articuloAux);
+                existeCodigo = true;
+                System.out.println("Articulo borrado");
+              }
             }
-          }while((!(codigo.equals(codigoIntroducido))) && (i < N) );
-         
-          if(i == N){
-            System.out.println("El codigo no existe en la base de datos.");
-          }else{
-            existeCodigo = true;
-            articulo[i].setCodigo("Libre");
-            System.out.println("Artículo borrado");
-          }
+            
+            if(existeCodigo){
+              a.remove(posicion);
+            }
+
+            if(!existeCodigo){
+                System.out.println("\nNo existe el código del articulo\n");
+            }
           }while(!existeCodigo);
         break;
         
