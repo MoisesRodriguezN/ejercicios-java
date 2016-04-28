@@ -23,12 +23,12 @@ public class Gestisimal {
     int i;
     int opcion;
     int posicion = 0;
-    String codigo;
-    String codigoIntroducido;
-    String descripcionIntroducia;
-    double precioCompra;
-    double precioVenta;
-    int stockIntroducido;
+    String codigo = "";
+    String codigoIntroducido = "";
+    String descripcionIntroducia ="";
+    double precioCompra = 0;
+    double precioVenta = 0;
+    int stockIntroducido = 0;
     boolean existeCodigo = false;
     boolean compruebaMercancia;
     
@@ -111,55 +111,37 @@ public class Gestisimal {
         break;
         
         case 4://Modificación
-          do{ //Vuelve a pedir el código mientras no existe el introducido.  
-          existeCodigo = false;
-          System.out.println("Escribe el código del articulo a modificar: ");
-          codigoIntroducido = s.nextLine();
-          i = -1;
-          codigo="";
+           //Comprueba que existe el código y modifica el artículo. 
           do{
-              i ++;
-              if (i < N) {
-                codigo = articulo[i].getCodigo();
-              }
-            }while((!(codigo.equals(codigoIntroducido))) && (i < N) );//Comprueba que existe al codigo
-
-            
-            if(i == N){
-              System.out.println("El codigo no existe en la base de datos.");
-              
-            }else{
-
+            System.out.print("Introduce el codigo del artículo: ");
+            existeCodigo = false;
+            codigoIntroducido = s.nextLine();
+            for(Articulo articuloAux : a){ 
+             if(articuloAux.getCodigo().equals(codigoIntroducido)){
+              posicion = a.indexOf(articuloAux);
               existeCodigo = true;
-              System.out.println("Introduce los datos, para dejar algo igual pulsa Intro");
-              articulo[i].setCodigo(codigoIntroducido);
-              System.out.print("Introduce la descripción: ");
-
-              String descripcion = s.nextLine();
-              if(!descripcion.equals("")){
-                articulo[i].setDescripcion(descripcion);
-              }
-
-              System.out.print("Introduce el precio de compra: ");
-              String precioCompra = (s.nextLine());
-              if(!precioCompra.equals("")){
-                articulo[i].setPrecioCompra(Double.parseDouble(precioCompra));
-              }
-
-              System.out.print("Introduce el precio de venta: ");
-              String precioVenta = (s.nextLine());
-              if(!precioVenta.equals("")){
-                articulo[i].setPrecioVenta(Double.parseDouble(precioVenta));
-              }
-
-              System.out.print("Introduce  el stock: ");
-              String stock = (s.nextLine());
-              if(!stock.equals("")){
-                articulo[i].setStock(Integer.parseInt(stock));
-              }
             }
+          }
+
+          if(existeCodigo){
+            //Pide los datos y modifica el artículo
+            System.out.print("Introduce la descripción: ");
+            a.get(posicion).setDescripcion(s.nextLine());
+            System.out.print("Introduce el precio de compra: ");
+            a.get(posicion).setPrecioCompra(Double.parseDouble(s.nextLine()));
+            System.out.print("Introduce el precio de venta: ");
+            a.get(posicion).setPrecioVenta(Double.parseDouble(s.nextLine()));
+            System.out.print("Introduce  el stock: ");
+            a.get(posicion).setStock(Integer.parseInt(s.nextLine()));
+            System.out.print("\nArtículo modificado correctamente\n");
+          }
+          
+          if(!existeCodigo){
+            System.out.println("\nNo existe el código del articulo\n");
+          }
+          
           }while(!existeCodigo);
-            
+
           break;
           
         case 5://Entrada de mercancia
