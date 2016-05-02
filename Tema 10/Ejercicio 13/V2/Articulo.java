@@ -5,7 +5,7 @@ package EjercicioExamenGestesimal;
  *
  * @author Moisés
  */
-public class Articulo {
+public class Articulo implements Comparable<Articulo>{
   
   private String codigo;
   private String descripcion;
@@ -97,6 +97,15 @@ public class Articulo {
    cadena += "\nCategoria: " + this.categoria;
    cadena += "\n------------------------------------------";
    return cadena;
+  }
+  
+  @Override
+ 
+ public int compareTo(Articulo articulo) {
+    if(!descripcion.equals(articulo.getDescripcion())){
+      
+    }
+      return descripcion.compareTo(articulo.getDescripcion());
   }
 
 }

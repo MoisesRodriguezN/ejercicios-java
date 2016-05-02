@@ -5,6 +5,7 @@
  */
 package EjercicioExamenGestesimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -77,7 +78,8 @@ public class GestisimalCategorias {
             opcion3 = Integer.parseInt(s.nextLine());
             
             switch(opcion3){
-              case 1://Listado completo                  
+              case 1://Listado completo   
+                Collections.sort(a);
                 for(Articulo articuloAux : a) {
                   System.out.println(articuloAux);
                 }
@@ -85,6 +87,7 @@ public class GestisimalCategorias {
               case 2://Listado por categorias
                 System.out.print("Introduce la categoría: ");
                 categoriaIntroducida = s.nextLine();
+                Collections.sort(a);
                 for(Articulo articuloAux : a) {
                   if(articuloAux.getCategoria().equals(categoriaIntroducida)){
                     System.out.println(articuloAux);
